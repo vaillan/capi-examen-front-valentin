@@ -1,0 +1,15 @@
+<table>
+    <tr>
+        <th>Nombre de usuario</th>
+        <th>Fecha de nacimiento</th>
+        <th>Edad</th>
+        <th>Dirección</th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.fecha_nacimiento }}</td>
+      <td>{{ user.edad }}</td>
+      <td>{{ 'colonia: '+ user.user_domicilio.colonia + '| CP: '+ user.user_domicilio.cp + '| Ciudad: ' + user.user_domicilio.ciudad + '| numExt: ' + user.user_domicilio.numero_exterior + '| Dirección generada por laravel: ' + user.user_domicilio.domicilio }}</td>
+    </tr>
+</table>
+
